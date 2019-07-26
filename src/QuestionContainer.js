@@ -47,7 +47,7 @@ class QuestionContainer extends Component {
         const {question, answer} = this.props;
         return (
             <>  
-                <div className="alert alert-info" > 
+                <div className="alert alert-info text-center" > 
                     <p>{question}</p>
                     <RevealButton 
                         revealConfirmation={this.revealConfirmation}
