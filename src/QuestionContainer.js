@@ -46,27 +46,29 @@ class QuestionContainer extends Component {
     render () {
         const {question, answer} = this.props;
         return (
-            <>
-                <p>{question}</p>
-                <RevealButton 
-                    revealConfirmation={this.revealConfirmation}
-                    enabled={this.state.revealButton} 
-                />
-                {
-                    this.state.revealConfirmation ?
-                        <Confirmation 
-                            yes={this.yes} 
-                            no={this.no} 
-                            hideConfirmation={this.hideConfirmation}
-                            disableRevealButton={this.disableRevealButton}
-                        />
-                    :   null
-                }
-                {
-                    this.state.revealAnswer ?
-                        <Answer answer={answer} />
-                    :   null
-                }
+            <>  
+                <div className="alert alert-info" > 
+                    <p>{question}</p>
+                    <RevealButton 
+                        revealConfirmation={this.revealConfirmation}
+                        enabled={this.state.revealButton} 
+                    />
+                    {
+                        this.state.revealConfirmation ?
+                            <Confirmation 
+                                yes={this.yes} 
+                                no={this.no} 
+                                hideConfirmation={this.hideConfirmation}
+                                disableRevealButton={this.disableRevealButton}
+                            />
+                        :   null
+                    }
+                    {
+                        this.state.revealAnswer ?
+                            <Answer answer={answer} />
+                        :   null
+                    }
+                </div>
             </>
         )
     }

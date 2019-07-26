@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import Notification from './Notification.js';
-
-
 import './App.css';
 
 class App extends Component {
@@ -28,7 +26,9 @@ class App extends Component {
     render () {
         return (
             <>
-                <Notification type={this.state.type} questions={this.state.questions}/>
+                <div className='container'>
+                    <Notification type={this.state.type} questions={this.state.questions}/>
+                </div>
             </>
         )
     }

@@ -4,10 +4,12 @@ class Confirmation extends Component{
     render () {
         const { yes, no, hideConfirmation, disableRevealButton } = this.props;
         return (
-            <>
-                <p>Are you sure you qant to quit trying?</p>
-                <button onClick={ () => { yes(); hideConfirmation();  disableRevealButton() } }>Yes</button>
-                <button onClick={ () => { no(); hideConfirmation() } }>No</button>
+            <>  
+                <div class='alert alert-info'>
+                    <p>Are you sure you qant to quit trying?</p>
+                    <div className='btn btn-primary' onClick={ () => { yes(); hideConfirmation();  disableRevealButton() } }>Yes</div>
+                    <div className='btn btn-danger' onClick={ () => { no(); hideConfirmation() } }>No</div>
+                </div>
             </>
         )
     }
