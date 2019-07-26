@@ -5,7 +5,7 @@ class Confirmation extends Component{
         const { yes, no, hideConfirmation, disableRevealButton } = this.props;
         return (
             <>  
-                <div class='alert alert-info'>
+                <div class='alert alert-info text-center'>
                     <p>Are you sure you qant to quit trying?</p>
                     <div className='btn btn-primary' onClick={ () => { yes(); hideConfirmation();  disableRevealButton() } }>Yes</div>
                     <div className='btn btn-danger' onClick={ () => { no(); hideConfirmation() } }>No</div>
