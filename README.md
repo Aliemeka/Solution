@@ -1,9 +1,8 @@
 # Quiz App 
 
 ## Some things I learnt 
-* Integrating bootsttrap in react.
-* The benefits of react modular nature.
-* 
+* Integrating bootstrap in react.
+* The pros of react's modular nature.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
