@@ -2,7 +2,7 @@ import React from 'react';
 import QuestionContainer from './QuestionContainer';
 
 
-const QuestionList = ({questions}) => {
+function QuestionList ({questions}) {
     const mappedQuestions = questions.map((question,i) => 
         <QuestionContainer 
             key={i}
@@ -14,8 +14,7 @@ const QuestionList = ({questions}) => {
         <div>
             {mappedQuestions}
         </div>
-    )
-    
+    )  
 }
 
 export default QuestionList;

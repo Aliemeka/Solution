@@ -1,19 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class RevealButton extends Component {
-    render () {
-        return (
-                <div className='text-center'>
-                    <button className="btn btn-primary"
-                        disabled={!this.props.enabled}
-                        onClick={this.props.revealConfirmation}
-                    > 
-                        Reveal Answer
-                    </button>
-                </div>
+function RevealButton ({enabled, revealConfirmation}) {
+    return (
+            <div className='text-center'>
+                <button className="btn btn-primary"
+                    disabled={!enabled}
+                    onClick={revealConfirmation}
+                > 
+                    Reveal Answer
+                </button>
+            </div>
 
-        )
-    }
+    )
 }
 
 export default RevealButton;

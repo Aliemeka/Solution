@@ -1,18 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import QuestionList from './QuestionList.js';
 
-class Notification extends Component {
-    render () {
+function Notification ({questions}) {
         return(
             <>
-                <QuestionList questions={this.props.questions} />
+                <QuestionList questions={questions} />
             </>
         )
-    }
-}
-
-Notification.defaultProps = {
-    type: 'alert alert-info'
 }
 
 export default Notification;

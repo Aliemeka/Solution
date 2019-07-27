@@ -1,17 +1,10 @@
 import React, { Component } from 'react';
 import Notification from './Notification.js';
-import './App.css';
 
 class App extends Component {
     constructor() {
         super()
         this.state = {
-            type: [
-                { success: 'alert alert-success'},
-                { message: 'alert alert-info'},
-                { caution: 'alert alert-caution'},
-                { error: 'alert alert-error'}
-            ],
             questions: [
                 {question:'A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost?',
                   answer: '5 cents'},
@@ -27,7 +20,7 @@ class App extends Component {
         return (
             <>
                 <div className='container'>
-                    <Notification type={this.state.type} questions={this.state.questions}/>
+                    <Notification questions={this.state.questions}/>
                 </div>
             </>
         )
